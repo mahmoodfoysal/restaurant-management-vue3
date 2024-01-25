@@ -1,15 +1,12 @@
 <template>
-  <img class="signup-logo" src="./assets/signup-logo-removebg-preview.png" alt="Signup Logo">
-  <SignUp></SignUp>
+  
+  <router-view></router-view>
 </template>
 
 <script>
-import SignUp from './components/SignUp.vue';
 export default {
   name: 'App',
-  components: {
-    SignUp
-  }
+
 }
 </script>
 
@@ -17,7 +14,5 @@ export default {
 #app {
   text-align: center;
 }
-.signup-logo {
-  height: 190px;
-}
+
 </style>
