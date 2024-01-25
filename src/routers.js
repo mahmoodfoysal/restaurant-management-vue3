@@ -1,6 +1,8 @@
 import Home from "./components/Home.vue";
 import SignUp from "./components/SignUp.vue";
 import Login from "./components/Login.vue";
+import AddRestaurentVue from "./components/AddRestaurent.vue";
+import UpdateRestaurantVue from "./components/UpdateRestaurant.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -18,6 +20,16 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
+    },
+    {
+        path: '/add-restaurant',
+        name: 'AddRestaurant',
+        component: AddRestaurentVue
+    },
+    {
+        path: '/update-restaurant',
+        name: 'UpdateRestaurant',
+        component: UpdateRestaurantVue
     }
 ];
 
