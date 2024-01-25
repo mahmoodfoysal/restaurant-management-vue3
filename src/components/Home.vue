@@ -13,7 +13,7 @@ export default {
     mounted() {
         let user = localStorage.getItem('user-info')
         if(!user) {
-            this.$router.push({name: 'SignUp'})
+            this.$router.push({name: 'Login'})
         }
     }
 }

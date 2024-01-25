@@ -3,13 +3,19 @@
     <a href="">Home</a>
     <a href="">Add Resturant</a>
     <a href="">Update Resturant</a>
-    <a href="">Logout</a>
+    <a @click="logOut" href="">Logout</a>
 </div>
 </template>
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    methods: {
+        logOut() {
+            localStorage.clear();
+            this.$router.push({name: 'Login'})
+        }
+    }
 }
 </script>
 
@@ -24,5 +30,12 @@ export default {
     color: white;
     padding: 16px 14px;
     text-decoration: none;
+    font: bold;
+    cursor: pointer;
+}
+.nav a:hover {
+    color: black;
+    background-color: white;
+    font: bold;
 }
 </style>
