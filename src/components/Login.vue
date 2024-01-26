@@ -70,9 +70,7 @@ import axios from 'axios';
 .signup-btn-style {
     width: 324px;
     height: 40px;
-    /* padding-left: 20px; */
     display: block;
-    /* margin-bottom: 30px; */
     margin-right: auto;
     margin-left: auto;
     border: 1px solid skyblue;
