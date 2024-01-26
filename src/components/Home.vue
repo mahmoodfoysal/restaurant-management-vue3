@@ -15,7 +15,9 @@
             <td>{{ item.contact }}</td>
             <td>{{ item.address }}</td>
             <td>
-                <router-link :to="{name: 'UpdateRestaurant', params: {id: item.id}}"><button type="button">Update</button></router-link>
+                <router-link :to="{ name: 'UpdateRestaurant', params: { id: item.id } }"><button
+                        type="button">Update</button></router-link>
+                <button @click="deleteRestaurant(item.id)" type="button">Delete</button>
             </td>
         </tr>
     </table>
@@ -35,21 +37,32 @@ export default {
     components: {
         Header
     },
-    async mounted() {
-        let user = localStorage.getItem('user-info');
-        this.name = JSON.parse(user).name
-        if (!user) {
-            this.$router.push({ name: 'Login' })
+    methods: {
+        async deleteRestaurant(id) {
+            let result = await axios.delete('http://localhost:3000/restaurant/'+ id);
+            if (result.status === 200) {
+                this.loadData();
+            }
+        },
+        async loadData() {
+            let user = localStorage.getItem('user-info');
+            this.name = JSON.parse(user).name
+            if (!user) {
+                this.$router.push({ name: 'Login' })
+            }
+            let result = await axios.get('http://localhost:3000/restaurant');
+            this.restaurant = result.data;
+            console.log(result.data);
         }
-        let result = await axios.get('http://localhost:3000/restaurant');
-        this.restaurant = result.data;
-        console.log(result.data);
+    },
+    async mounted() {
+        this.loadData();
     }
 }
 </script>
 
 <style>
-td{
+td {
     width: 160px;
     height: 40px;
 }

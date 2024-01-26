@@ -21,12 +21,6 @@
   ],
   "restaurant": [
     {
-      "name": "Burger King update",
-      "contact": "8807777777",
-      "address": "Dhaka",
-      "id": "19e4"
-    },
-    {
       "id": "19e3",
       "name": "Chillox",
       "contact": 88955566355,
