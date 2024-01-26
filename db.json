@@ -31,6 +31,24 @@
       "name": "Chillox",
       "contact": 88955566355,
       "address": "Dhaka, Bangladesh"
+    },
+    {
+      "id": "3f0e",
+      "name": "KFC",
+      "contact": "556225566",
+      "address": "Badda, Dhaka"
+    },
+    {
+      "id": "840d",
+      "name": "BFC",
+      "contact": "7885888",
+      "address": "Hatirjhil, Dhaka"
+    },
+    {
+      "id": "57b6",
+      "name": "Khana's",
+      "contact": "7885888",
+      "address": "Badda"
     }
   ]
 }
